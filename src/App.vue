@@ -8,7 +8,7 @@ const name = ref(null);
 <template>
   <form>
     <label for="name-input">Introduce tu nombre: </label>
-    <input id="name-input" v-model="name" @input="console.log(name)" type="text" placeholder="Introduce your name">
+    <input id="name-input" v-model="name" @input="console.log(name)" type="text" placeholder="Introduce tu nombre">
   </form>
 </template>
 
