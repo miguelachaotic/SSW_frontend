@@ -5,7 +5,6 @@ import { ref } from 'vue';
 
 const validCredentials = ref(false);
 
-
 </script>
 
 <template>
@@ -30,7 +29,6 @@ const validCredentials = ref(false);
       <hr>
       <router-link id="register" class="inner_login_container" to="/register">Register Here!</router-link>
     </form>
-
   </div>
 </template>
 
@@ -88,11 +86,19 @@ input[type="password"] {
 }
 
 a {
-  color: #007bff;
+  color: #007fff;
   text-decoration: none;
   font-size: 14px;
   display: block;
   margin-top: 10px;
+}
+
+label {
+  font-size: 17px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 80%;
 }
 
 a:hover {
@@ -101,13 +107,7 @@ a:hover {
 </style>
 
 <style scoped>
-label {
-  font-size: 17px;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  width: 80%;
-}
+
 
 hr {
   border: none;
@@ -138,8 +138,6 @@ hr {
 #invalid-credentials{
   color: red;
 }
-
-
 
 .router-link input[type="button"]:hover {
   background: #f0f0f0;
