@@ -1,29 +1,33 @@
 # SSW
 
-This template should help get you started developing with Vue 3 in Vite.
+Repositorio para las prácticas de Servicios y Sistemas Web de la Universidad de Valladolid.
 
-## Recommended IDE Setup
+## Prerrequisitos
 
-[VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur).
+Para el funcionamiento de esta práctica es necesario tener instalado
+[Node.js](https://nodejs.org/en/download). También es necesario tener
+conexión a Internet.
 
-## Customize configuration
+## Instalación
 
-See [Vite Configuration Reference](https://vite.dev/config/).
-
-## Project Setup
-
+Para instalar el proyecto clona el repositorio en una carpeta local.
+```shell
+git clone https://github.com/miguelachaotic/SSW_frontend.git
+cd SSW_frontend
+```
+Una vez instalado, ejecutamos
 ```sh
 npm install
 ```
+para instalar todas las dependencias del proyecto.
 
-### Compile and Hot-Reload for Development
-
+Por último, para ejecutarlo de forma rápida, sin compresión,
+podemos ejecutar el siguiente comando:
 ```sh
 npm run dev
 ```
-
-### Compile and Minify for Production
-
-```sh
+O bien ejecutamos 
+```shell
 npm run build
+npm run preview
 ```
