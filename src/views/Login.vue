@@ -2,6 +2,7 @@
 import UsernameInput from "@/components/UsernameInput.vue";
 import PasswordInput from "@/components/PasswordInput.vue";
 import { ref } from 'vue';
+import RemembermeOption from "@/components/RemembermeOption.vue";
 
 const validCredentials = ref(false);
 
@@ -13,12 +14,7 @@ const validCredentials = ref(false);
     <form>
       <UsernameInput/>
       <PasswordInput/>
-      <div class="inner_login_container" id="remember_user">
-        <input id="inner_checkbox" type="checkbox">
-        <label for="inner_checkbox">
-          Remember me
-        </label>
-      </div>
+      <RemembermeOption/>
       <div class="inner_login_container">
         <input type="button" value="Login">
       </div>
@@ -113,13 +109,6 @@ hr {
   border: none;
   border-top: 2px solid #2a2a2a;
   margin: 20px 0;
-}
-
-#remember_user {
-  flex-direction: row;
-  justify-content: center;
-  width: 100%;
-  padding-left: 27%;
 }
 
 #register {
