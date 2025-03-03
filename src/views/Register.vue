@@ -3,20 +3,20 @@
 import EmailInput from '@/components/EmailInput.vue';
 import NameInput from '@/components/NameInput.vue';
 import PasswordInput from '@/components/PasswordInput.vue';
-import RemembermeOption from '@/components/RemembermeOption.vue';
+import RememberMeOption from '@/components/RememberMeOption.vue';
 import UsernameInput from '@/components/UsernameInput.vue';
 
 </script>
 
 <template>
     <div class="login_container">
-        <h1>REGISTER</h1>
+        <h1>Register Account</h1>
         <form action="">
             <NameInput/>
             <UsernameInput/>
             <EmailInput/>
             <PasswordInput/>
-            <RemembermeOption/>
+            <RememberMeOption/>
             <div class="inner_login_container">
                 <button type="submit">Register now!</button>
             </div>
