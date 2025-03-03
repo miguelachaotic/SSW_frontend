@@ -104,7 +104,6 @@ a:hover {
 
 <style scoped>
 
-
 hr {
   border: none;
   border-top: 2px solid #2a2a2a;
@@ -124,11 +123,13 @@ hr {
   margin-left: 10%;
 }
 
+#register:hover{
+  text-decoration: none;
+  background: #545454;
+}
+
 #invalid-credentials{
   color: red;
 }
 
-.router-link input[type="button"]:hover {
-  background: #f0f0f0;
-}
 </style>
