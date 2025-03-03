@@ -1,8 +1,5 @@
 <script setup>
-const props = defineProps({
-  name: String,
-  domain: String
-})
+
 </script>
 
 <template>
