@@ -1,6 +1,5 @@
 <script setup>
 import { ref } from "vue";
-
 let authenticated = ref(false);
 </script>
 
@@ -46,6 +45,7 @@ let authenticated = ref(false);
   align-items: center;
   height: 80px;
 }
+
 a {
   font-size: 30px;
   color: whitesmoke;

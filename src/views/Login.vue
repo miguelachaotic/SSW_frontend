@@ -1,8 +1,8 @@
 <script setup>
 import UsernameInput from "@/components/UsernameInput.vue";
 import PasswordInput from "@/components/PasswordInput.vue";
-import { ref } from 'vue';
 import RememberMeOption from "@/components/RememberMeOption.vue";
+import { ref } from 'vue';
 
 const validCredentials = ref(false);
 

@@ -5,7 +5,9 @@ import NameInput from '@/components/NameInput.vue';
 import PasswordInput from '@/components/PasswordInput.vue';
 import RememberMeOption from '@/components/RememberMeOption.vue';
 import UsernameInput from '@/components/UsernameInput.vue';
+import {ref} from "vue";
 
+const hola = ref(null)
 </script>
 
 <template>
@@ -14,7 +16,7 @@ import UsernameInput from '@/components/UsernameInput.vue';
         <form action="">
             <NameInput/>
             <UsernameInput/>
-            <EmailInput/>
+            <EmailInput domain="gmail.com" v-model:name="hola"/>
             <PasswordInput/>
             <RememberMeOption/>
             <div class="inner_login_container">
