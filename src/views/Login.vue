@@ -2,7 +2,7 @@
 import UsernameInput from "@/components/UsernameInput.vue";
 import PasswordInput from "@/components/PasswordInput.vue";
 import { ref } from 'vue';
-import RemembermeOption from "@/components/RemembermeOption.vue";
+import RememberMeOption from "@/components/RememberMeOption.vue";
 
 const validCredentials = ref(false);
 
@@ -14,7 +14,7 @@ const validCredentials = ref(false);
     <form>
       <UsernameInput/>
       <PasswordInput/>
-      <RemembermeOption/>
+      <RememberMeOption/>
       <div class="inner_login_container">
         <input type="button" value="Login">
       </div>
