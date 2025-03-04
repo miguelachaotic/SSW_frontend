@@ -5,7 +5,7 @@
 <template>
   <div class="inner_login_container">
     <label>
-      Username: <input type="text" placeholder="peter@example.com">
+      Email: <input type="text" placeholder="peter@example.com">
     </label>
   </div>
 </template>
