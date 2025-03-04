@@ -20,7 +20,7 @@ const validCredentials = ref(false);
       </div>
       <div v-if="!validCredentials" id="invalid-credentials">Credentials do not match!</div>
       <div class="inner_login_container">
-        <a href="">Forgot your password?</a>
+        <router-link to="/retrieve-password">Forgot your password?</router-link>
       </div>
       <hr>
       <router-link id="register" class="inner_login_container" to="/register">Register Here!</router-link>

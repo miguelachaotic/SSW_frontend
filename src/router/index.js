@@ -7,6 +7,7 @@ import Profile from "@/views/Profile.vue";
 import Register from "@/views/Register.vue";
 import Routines from "@/views/Routines.vue";
 import Social from "@/views/Social.vue";
+import RetrievePassword from "@/views/RetrievePassword.vue";
 
 const routes = [
     { path: '/', component: Home },
@@ -16,7 +17,8 @@ const routes = [
     { path: '/profile', component: Profile },
     { path: '/register', component: Register },
     { path: '/routines', component: Routines },
-    { path: '/social', component: Social }
+    { path: '/social', component: Social },
+    { path: '/retrieve-password', component: RetrievePassword}
 ];
 
 const router = createRouter({
