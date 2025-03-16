@@ -18,12 +18,14 @@ const validCredentials = ref(false);
       <div class="inner_login_container">
         <input type="button" value="Login">
       </div>
-      <div v-if="!validCredentials" id="invalid-credentials">Credentials do not match!</div>
+      <div v-if="!validCredentials" id="invalid_credentials">Credentials do not match!</div>
       <div class="inner_login_container">
         <router-link to="/retrieve-password">Forgot your password?</router-link>
       </div>
       <hr>
-      <router-link id="register" class="inner_login_container" to="/register">Register Here!</router-link>
+      <div class="inner_login_container">
+        <router-link id="register" to="/register">Register Here!</router-link>
+      </div>
     </form>
   </div>
 </template>
@@ -45,8 +47,6 @@ hr {
   color: white;
   cursor: pointer;
   border-radius: 4px;
-  margin-top: 10px;
-  margin-left: 10%;
 }
 
 #register:hover{
@@ -54,7 +54,7 @@ hr {
   background: #545454;
 }
 
-#invalid-credentials{
+#invalid_credentials{
   color: red;
 }
 

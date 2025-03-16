@@ -1,5 +1,6 @@
 <script setup>
 
+import UserPost from "@/components/UserPost.vue";
 </script>
 
 <template>
@@ -17,6 +18,9 @@
     </div>
     <div id="home_right_side">
       Here we got to fill with some posts made by our staff! We wish users could see the things we post.
+      <div>
+        <UserPost profile-image="favicon.ico" username="Admin Peter!" description="An awesome desc"/>
+      </div>
     </div>
   </div>
 </template>
@@ -46,7 +50,8 @@
 #home_img{
   width: 100%;
   height: auto;
-  border: grey solid 2px;
+  padding: 4px;
+  background: white;
 }
 
 </style>
