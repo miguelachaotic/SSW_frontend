@@ -91,7 +91,7 @@
 .content {
   margin-left: 32%;
   padding: 20px;
-  max-width: 65%;
+  max-width: 67%;
   overflow-y: auto;
 }
 h1{

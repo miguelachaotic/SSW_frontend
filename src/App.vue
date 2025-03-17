@@ -41,7 +41,6 @@ let authenticated = ref(false);
   display: flex;
   justify-content: space-around;
   background: #333;
-  border-radius: 0 0 30px 30px;
   align-items: center;
   height: 80px;
 }
