@@ -31,3 +31,12 @@ O bien ejecutamos
 npm run build
 npm run preview
 ```
+
+# Aspectos a tener en cuenta
+Existe un botón situado en la parte superior izquierda de forma absoluta en la página. Este botón lo único que permite
+hacer es cambiar entre vistas. No tiene ninguna otra funcionalidad. Gracias a que el desarrollo lo estamos haciendo
+usando Vue.js como framework de desarrollo no hay que implementar apenas funcionalidad para esto. No estará presente
+en la versión completa de la aplicación.
+
+Nuestra intención desde un inicio era evitar usar ningún tipo de funcionalidad adicional, pero este botón nos facilita
+mucho la tarea posterior de enlazar con el proceso backend.
