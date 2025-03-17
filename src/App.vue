@@ -39,15 +39,10 @@ let authenticated = ref(false);
 .nav_bar {
   display: flex;
   justify-content: space-around;
-  background: #333;
+  background: #c3073f;
   align-items: center;
   height: 80px;
   margin: 0;
-}
-
-
-.nav_link router-link:hover{
-  background-color: #545454;
 }
 
 a {
@@ -64,7 +59,7 @@ a {
 }
 
 .router-link-active{
-  background-color: #555;
+  background-color: #950740;
 }
 
 </style>

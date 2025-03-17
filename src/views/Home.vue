@@ -6,11 +6,11 @@ let user = "Jose";
 
 <template>
   <div class="home_container">
-    <div>
+    <div class="content">
       <h1>Welcome back {{user}}!</h1>
 
     </div>
-    <div>
+    <div class="admin-posts">
       <p>Hola buenas</p>
     </div>
   </div>
@@ -30,6 +30,14 @@ div{
 
 .home_container{
   display: flex;
+}
+
+.content{
+  width: 66%;
+}
+
+.admin-posts{
+  width: 34%;
 }
 
 </style>

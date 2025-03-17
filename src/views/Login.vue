@@ -4,7 +4,7 @@ import PasswordInput from "@/components/PasswordInput.vue";
 import RememberMeOption from "@/components/RememberMeOption.vue";
 import { ref } from 'vue';
 
-const validCredentials = ref(false);
+const validCredentials = ref(true);
 
 </script>
 
@@ -32,9 +32,14 @@ const validCredentials = ref(false);
 
 <style scoped>
 
+h1{
+  color: black;
+  font-size: 36px;
+}
+
 hr {
   border: none;
-  border-top: 2px solid #2a2a2a;
+  border-top: 2px solid var(--text_color);
   margin: 20px 0;
 }
 
