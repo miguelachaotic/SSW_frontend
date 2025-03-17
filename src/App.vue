@@ -15,7 +15,7 @@ let authenticated = ref(false);
              @click="authenticated = !authenticated"
       >
       <router-link to="/">
-        <img src="@/assets/Icono%20GUI.png" alt="Icono" width="100p" height="80">
+        <img src="@/assets/logoWeb.png" alt="Icono" width="100p" height="80">
       </router-link>
       <router-link v-if="!authenticated" to="/about">About</router-link>
       <router-link v-if="!authenticated" to="/login">Login</router-link>
