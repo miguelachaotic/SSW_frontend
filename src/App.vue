@@ -14,22 +14,21 @@ let authenticated = ref(false);
              :value="(authenticated) ? 'Unauthenticate' : 'Authenticate'"
              @click="authenticated = !authenticated"
       >
-      <router-link to="/">
-        <img src="@/assets/logoWeb.png" alt="Icono" width="100p" height="80p">
-      </router-link>
-      <router-link v-if="!authenticated" to="/about">About</router-link>
-      <router-link v-if="!authenticated" to="/login">Login</router-link>
-      <router-link v-if="!authenticated" to="/register">Register</router-link>
-      <router-link v-if="authenticated" to="/social">Social</router-link>
-      <router-link v-if="authenticated" to="/nutrition">Nutrition</router-link>
-      <router-link v-if="authenticated" to="/profile">Profile</router-link>
-      <router-link v-if="authenticated" to="/routines">Routines</router-link>
+      <router-link to="/" class="nav_link">Home</router-link>
+      <router-link v-if="!authenticated" class="nav_link" to="/about">About</router-link>
+      <router-link v-if="!authenticated" class="nav_link" to="/login">Login</router-link>
+      <router-link v-if="!authenticated" class="nav_link" to="/register">Register</router-link>
+      <router-link v-if="authenticated"  class="nav_link" to="/social">Social</router-link>
+      <router-link v-if="authenticated"  class="nav_link" to="/nutrition">Nutrition</router-link>
+      <router-link v-if="authenticated"  class="nav_link" to="/routines">Routines</router-link>
+      <router-link v-if="authenticated"  class="nav_link" to="/profile">Profile</router-link>
     </nav>
     <router-view />
   </div>
 </template>
 
 <style scoped>
+/* boton para autentificarte. ver el README si no lo has visto ya */
 #auth_aux_button {
   position: absolute;
   top: 10px;
@@ -43,6 +42,12 @@ let authenticated = ref(false);
   background: #333;
   align-items: center;
   height: 80px;
+  margin: 0;
+}
+
+
+.nav_link router-link:hover{
+  background-color: #545454;
 }
 
 a {
@@ -50,5 +55,16 @@ a {
   color: whitesmoke;
   font-family: "Chalkboard SE", sans-serif;
   text-decoration: none;
+  border: #ffffff 1px solid;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  margin-bottom: 1%;
+  align-content: center;
 }
+
+.router-link-active{
+  background-color: #555;
+}
+
 </style>
