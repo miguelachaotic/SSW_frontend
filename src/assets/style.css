@@ -1,11 +1,19 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap');
 
+@font-face {
+    font-family: chopsic;
+    src: url("@/assets/fonts/chopsic-font/Chopsic-K6Dp.ttf");
+    font-weight: normal;
+    font-style: normal;
+}
+
 :root {
     --primary_bg: #1a1a1d;
     --secondary_bg: #4e4e50;
     --dark_main_color: #6f2232;
     --main_color: #950740;
     --light_main_color: #c3073f;
+    --very_light_main_color: #ed064f;
 }
 
 html, body {
@@ -58,7 +66,7 @@ input[type="password"] {
     padding: 10px;
     font-size: 16px;
     border: none;
-    background: var(--dark_main_color);
+    background: var(--main_color);
     color: white;
     cursor: pointer;
     border-radius: 4px;
@@ -67,7 +75,7 @@ input[type="password"] {
 }
 
 .inner_login_container input[type="button"]:hover {
-    background: var(--main_color);
+    background: var(--light_main_color);
 }
 
 a {

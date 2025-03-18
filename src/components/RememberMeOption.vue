@@ -5,9 +5,9 @@
 <template>
   <div class="inner_login_container" id="remember_user">
     <input class="custom-checkbox" id="inner_checkbox" type="checkbox">
-        <label for="inner_checkbox">
-            Remember me
-        </label>
+    <label for="inner_checkbox">
+      Remember me
+    </label>
   </div>
 </template>
 
