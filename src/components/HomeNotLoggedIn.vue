@@ -26,7 +26,9 @@
 
 .join_now_container{
   position: absolute;
-  margin: 23% 42.2%;
+  top: 60%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   display: flex;
   background-color: var(--very_light_main_color);
   justify-content: center;
@@ -52,7 +54,9 @@
   position: absolute;
   align-items: center;
   justify-items: center;
-  margin: 9% 33.2%;
+  top: 35%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
 #main_header{
