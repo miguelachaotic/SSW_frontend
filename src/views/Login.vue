@@ -4,7 +4,7 @@ import PasswordInput from "@/components/PasswordInput.vue";
 import RememberMeOption from "@/components/RememberMeOption.vue";
 import { ref } from 'vue';
 
-const validCredentials = ref(false);
+const validCredentials = ref(true);
 
 </script>
 
@@ -32,9 +32,14 @@ const validCredentials = ref(false);
 
 <style scoped>
 
+h1{
+  color: black;
+  font-size: 36px;
+}
+
 hr {
   border: none;
-  border-top: 2px solid #2a2a2a;
+  border-top: 2px solid var(--secondary_bg);
   margin: 20px 0;
 }
 
@@ -43,15 +48,17 @@ hr {
   padding: 10px;
   font-size: 16px;
   border: none;
-  background: #333;
+  background: var(--dark_main_color);
   color: white;
   cursor: pointer;
   border-radius: 4px;
+  transition: background-color 0.2s ease-in-out;
+
 }
 
 #register:hover{
   text-decoration: none;
-  background: #545454;
+  background: var(--main_color);
 }
 
 #invalid_credentials{

@@ -18,7 +18,7 @@ const routes = [
     { path: '/register', component: Register },
     { path: '/routines', component: Routines },
     { path: '/social', component: Social },
-    { path: '/retrieve-password', component: RetrievePassword}
+    { path: '/retrieve-password', component: RetrievePassword }
 ];
 
 const router = createRouter({
