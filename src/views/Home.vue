@@ -1,20 +1,17 @@
 <script setup>
 
-import UserPost from "@/components/UserPost.vue";
-let user = "Jose";
+import {inject} from "vue";
+import HomeLoggedIn from "@/components/HomeLoggedIn.vue";
+import HomeNotLoggedIn from "@/components/HomeNotLoggedIn.vue";
+
+const authenticated = inject('authenticated');
+
 </script>
 
 <template>
-  <div class="home_container">
-    <div class="content">
-      <h1>Welcome back {{user}}!</h1>
 
-    </div>
-    <div class="admin-posts">
-      <p>Hola buenas</p>
-    </div>
-  </div>
-
+<HomeLoggedIn v-if="authenticated" />
+<HomeNotLoggedIn v-else />
 
 </template>
 

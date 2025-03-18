@@ -1,15 +1,15 @@
 <script setup>
-import { ref } from "vue";
-let authenticated = ref(false);
+
+import {inject} from "vue";
+const authenticated = inject('authenticated');
+
+
 </script>
 
 <template>
+
   <div>
     <nav class="nav_bar">
-      <!--
-        En esta sección hay que implementar si el usuario ya está autenticado!!
-        Lo dejamos para la tercera parte!
-      -->
       <input type="button" id="auth_aux_button"
              :value="(authenticated) ? 'Unauthenticate' : 'Authenticate'"
              @click="authenticated = !authenticated"
@@ -23,7 +23,10 @@ let authenticated = ref(false);
       <router-link v-if="authenticated"  class="nav_link" to="/routines">Routines</router-link>
       <router-link v-if="authenticated"  class="nav_link" to="/profile">Profile</router-link>
     </nav>
-    <router-view />
+    <main class="content">
+      <router-view />
+    </main>
+
   </div>
 </template>
 
@@ -39,27 +42,34 @@ let authenticated = ref(false);
 .nav_bar {
   display: flex;
   justify-content: space-around;
-  background: #c3073f;
+  background: var(--light_main_color);
   align-items: center;
   height: 80px;
   margin: 0;
+  flex-direction: row;
 }
 
 a {
   font-size: 30px;
+  font-weight: bold;
   color: whitesmoke;
   font-family: "Chalkboard SE", sans-serif;
   text-decoration: none;
-  border: #ffffff 1px solid;
+  border: white 1px solid;
   width: 100%;
   height: 100%;
   text-align: center;
-  margin-bottom: 1%;
+  margin-bottom: 9px;
   align-content: center;
 }
 
 .router-link-active{
   background-color: #950740;
+}
+
+footer {
+  display: flex;
+  flex-direction: column;
 }
 
 </style>

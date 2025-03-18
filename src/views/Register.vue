@@ -14,7 +14,7 @@ import UsernameInput from '@/components/UsernameInput.vue';
         <form action="">
             <NameInput/>
             <UsernameInput/>
-            <EmailInput :name="hola" domain="gmail.com"/>
+            <EmailInput/>
             <PasswordInput/>
             <RememberMeOption/>
             <div class="inner_login_container">
@@ -25,20 +25,26 @@ import UsernameInput from '@/components/UsernameInput.vue';
 </template>
 
 <style scoped>
+
+h1{
+  color: var(--primary_bg);
+}
+
 .inner_login_container button[type="submit"] {
   width: 80%;
   padding: 10px;
   font-size: 16px;
   border: none;
-  background: #333;
+  background: var(--dark_main_color);
   color: white;
   cursor: pointer;
   border-radius: 4px;
   margin-top: 10px;
+  transition: background-color 0.2s ease-in-out;
 }
 
 .inner_login_container button[type="submit"]:hover {
-  background: #545454;
+  background: var(--main_color);
 }
 
 </style>

@@ -39,7 +39,7 @@ h1{
 
 hr {
   border: none;
-  border-top: 2px solid var(--text_color);
+  border-top: 2px solid var(--secondary_bg);
   margin: 20px 0;
 }
 
@@ -48,15 +48,17 @@ hr {
   padding: 10px;
   font-size: 16px;
   border: none;
-  background: #333;
+  background: var(--dark_main_color);
   color: white;
   cursor: pointer;
   border-radius: 4px;
+  transition: background-color 0.2s ease-in-out;
+
 }
 
 #register:hover{
   text-decoration: none;
-  background: #545454;
+  background: var(--main_color);
 }
 
 #invalid_credentials{

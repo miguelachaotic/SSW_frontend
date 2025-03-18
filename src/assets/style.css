@@ -1,9 +1,18 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap');
+
+:root {
+    --primary_bg: #1a1a1d;
+    --secondary_bg: #4e4e50;
+    --dark_main_color: #6f2232;
+    --main_color: #950740;
+    --light_main_color: #c3073f;
+}
+
 html, body {
     width: 100%;
     height: auto;
     margin: 0;
-    background-color: #1a1a1d;
+    background-color: var(--primary_bg);
     font-family: 'Inter', sans-serif;
     color: whitesmoke;
 }
@@ -49,15 +58,16 @@ input[type="password"] {
     padding: 10px;
     font-size: 16px;
     border: none;
-    background: #333;
+    background: var(--dark_main_color);
     color: white;
     cursor: pointer;
     border-radius: 4px;
     margin-top: 10px;
+    transition: background-color 0.2s ease-in-out;
 }
 
 .inner_login_container input[type="button"]:hover {
-    background: #545454;
+    background: var(--main_color);
 }
 
 a {
@@ -78,6 +88,6 @@ label {
     flex-direction: column;
     align-items: flex-start;
     width: 80%;
-    color: black;
+    color: var(--primary_bg)
 }
 

@@ -62,11 +62,16 @@ const handleDelete = (index, event) => {
 }
 
 .code-input:focus {
-  border-color: #007bff;
+  border-color: var(--light_main_color);
+}
+
+h1{
+  color: var(--primary_bg);
 }
 
 #header_verify_password{
   font-size: 25px;
+  color: var(--primary_bg);
 }
 
 </style>
