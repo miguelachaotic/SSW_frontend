@@ -44,7 +44,7 @@ const authenticated = inject('authenticated');
 .nav_bar {
   display: flex;
   justify-content: space-around;
-  background: var(--very_light_main_color);
+  background: linear-gradient(var(--main_color), var(--light_main_color));
   align-items: center;
   height: 80px;
   margin: 0;
@@ -67,7 +67,7 @@ a {
 }
 
 .router-link-active{
-  background-color: var(--light_main_color);
+  background: linear-gradient(var(--light_main_color), var(--very_light_main_color));
 }
 
 footer {
