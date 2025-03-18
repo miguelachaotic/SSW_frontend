@@ -47,6 +47,7 @@ const authenticated = inject('authenticated');
   height: 80px;
   margin: 0;
   flex-direction: row;
+  z-index: 1;
 }
 
 a {

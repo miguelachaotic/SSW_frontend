@@ -3,34 +3,37 @@
 </script>
 
 <template>
+  <div class="background-wrapper">
+    <div class="bg"></div>
+    <div class="bg bg2"></div>
+    <div class="bg bg3"></div>
 
-  <div class="bg"></div>
-  <div class="bg bg2"></div>
-  <div class="bg bg3"></div>
-
-  <div class="content-container">
-    <h1 id="main_header">FitRevolution</h1>
-    <h2 id="subtitle">Make your workout a revolution</h2>
+    <div class="content-container">
+      <h1 id="main_header">FitRevolution</h1>
+      <h2 id="subtitle">Make your workout a revolution</h2>
+    </div>
     <div class="join_now_container">
       <router-link class="join_button" to="/register">Join Now!</router-link>
     </div>
+
   </div>
+
 
 
 </template>
 
 <style scoped>
 
-
 .join_now_container{
   position: absolute;
-  left: 38.5%;
-  bottom: 40%;
+  margin: 23% 42.2%;
   display: flex;
   background-color: var(--very_light_main_color);
   justify-content: center;
   border-radius: 40px;
-  width: 300px;
+  width: 310px;
+  z-index: 2;
+  box-shadow: 4px 4px 8px 3px rgba(0, 0, 0, 0.25);
 }
 
 .join_button{
@@ -38,9 +41,23 @@
   width: 100%;
   height: 100%;
   text-align: center;
-  padding: 10px;
+  padding: 12px;
   margin: 0;
   transition: scale 0.2s ease-in-out;
+}
+
+.content-container{
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  align-items: center;
+  justify-items: center;
+  margin: 9% 33.2%;
+}
+
+#main_header{
+  font-family: chopsic, sans-serif;
+  font-size: 68px;
 }
 
 a {
@@ -53,20 +70,6 @@ a:hover {
   scale: 1.1;
 }
 
-#main_header{
-  font-family: chopsic, sans-serif;
-  font-size: 84px;
-  position: absolute;
-  left: 20%;
-}
-
-#subtitle{
-  position: absolute;
-  left: 30%;
-  top: 27%;
-  font-family: Inter, sans-serif;
-  font-size: 33px;
-}
 
 
 .bg {

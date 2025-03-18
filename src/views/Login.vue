@@ -48,7 +48,7 @@ hr {
   padding: 10px;
   font-size: 16px;
   border: none;
-  background: var(--dark_main_color);
+  background: var(--main_color);
   color: white;
   cursor: pointer;
   border-radius: 4px;
@@ -58,7 +58,7 @@ hr {
 
 #register:hover{
   text-decoration: none;
-  background: var(--main_color);
+  background: var(--light_main_color);
 }
 
 #invalid_credentials{
