@@ -35,7 +35,7 @@ h1{
   padding: 10px;
   font-size: 16px;
   border: none;
-  background: var(--dark_main_color);
+  background: var(--main_color);
   color: white;
   cursor: pointer;
   border-radius: 4px;
@@ -44,7 +44,7 @@ h1{
 }
 
 .inner_login_container button[type="submit"]:hover {
-  background: var(--main_color);
+  background: var(--light_main_color);
 }
 
 </style>
