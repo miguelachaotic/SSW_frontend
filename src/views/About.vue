@@ -68,16 +68,17 @@
 .container {
   display: flex;
   height: calc(100vh - 80px);
+  background-color:  var(--primary_bg);
   overflow: hidden;
 }
 
 .image-container {
   position: fixed;
   left: 0;
-  top: 80px;
+  top: 82px;
   width: 30%;
   height: calc(100vh - 80px);
-  background-color: #f0f0f0;
+  background-color: var(--secondary_bg);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -97,14 +98,18 @@
 h1{
     text-align: center;
     font-size: 50px;
+   
 }
 h2{
     font-size: 30px;
+   
 }
 h3{
     font-size: 19px;
+   
 }
 p{
     font-size:15px;
+    
 }
 </style>
