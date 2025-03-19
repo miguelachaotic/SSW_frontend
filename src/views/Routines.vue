@@ -64,11 +64,20 @@ import UserRoutine from '@/components/UserRoutine.vue';
 .routineSection {
   width: 80%;
   background-color: lightblue;
+    padding-top: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .filterSection {
   width: 20%;
-  background-color: lightgreen;
+
+  position: fixed;
+  background-color: aquamarine;
+  transform: translateY(-50%);
+  top: calc(50% + 27px);
+  right: 0;
 }
 h1{
     font-size: 75px;
