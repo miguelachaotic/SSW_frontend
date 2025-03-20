@@ -23,11 +23,11 @@ const props = defineProps({
   position: relative;      
   border: 2px solid black; 
   background-color: white; 
-  padding: 16px;           
+  padding: 25px;           
   border-radius: 8px;      
   width: 60%;
   height: 100px;           
-  margin-bottom:8px
+  margin-bottom:10px
 }
 
 .panelSuperior {
@@ -70,9 +70,9 @@ h1 {
 
 button {
   position: absolute;     
-  bottom: 10px;            
-  right: 16px;            
-  padding: 11px 27px;
+  bottom: 7px;            
+  right: 12px;            
+  padding: 14px 52px;
   background-color: var(--dark_main_color);
   color: white;
   border: none;
