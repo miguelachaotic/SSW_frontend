@@ -1,6 +1,6 @@
 <script setup>
 const props = defineProps({
-  tittle: String,
+  title: String,
   description: String
 });
 </script>
@@ -8,9 +8,9 @@ const props = defineProps({
 <template>
   <div class="rutina">
     <div class="panelSuperior">
-      <h1 id="titulo">{{ tittle }}</h1> 
+      <h1 id="titulo">{{ title }}</h1>
       <button id="moreOptions">
-        <img  src="@/assets/icons/moreOptions.png" alt="More Options" />
+        <img src="@/assets/icons/moreOptions.png" alt="More Options" />
       </button>
     </div>
     <p id="description">{{ description }}</p>
@@ -49,11 +49,12 @@ h1 {
   display: flex;           
   justify-content: center; 
   align-items: center;     
-  padding: 0;              
+  padding: 0;
   background-color: transparent;
+  transition: scale 0.2s ease-in-out;
 }
 #moreOptions:hover{
-    background-color: var(--main_color);
+  scale: 1.1;
 }
 
 #moreOptions img {
@@ -72,15 +73,16 @@ button {
   bottom: 7px;            
   right: 12px;            
   padding: 14px 52px;
-  background-color: var(--dark_main_color);
+  background-color: var(--main_color);
   color: white;
   border: none;
   cursor: pointer;
   border-radius: 5px;
+  transition: background-color 0.2s ease-in-out;
 }
 
 button:hover {
-  background-color: var(--main_color);
+  background-color: var(--light_main_color);
 }
 
 </style>

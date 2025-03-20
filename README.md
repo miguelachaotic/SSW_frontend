@@ -19,14 +19,14 @@ Una vez instalado, ejecutamos
 ```sh
 npm install
 ```
-para instalar todas las dependencias del proyecto.
+Para instalar todas las dependencias del proyecto.
 
 Por último, para ejecutarlo de forma rápida, sin compresión,
 podemos ejecutar el siguiente comando:
 ```sh
 npm run dev
 ```
-O bien ejecutamos 
+O bien ejecutamos el siguiente comando para tener la versión optimizada y compilada.
 ```shell
 npm run build
 npm run preview
