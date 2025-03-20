@@ -1,18 +1,17 @@
 <script setup>
 import { ref } from "vue";
 
-// Importar imágenes desde `assets`
 import placeholderImage from '@/assets/StockPfp.png';
 import likeIcon from "@/assets/icons/like.png";
 import likedIcon from "@/assets/icons/like.png";
 import commentIcon from "@/assets/icons/comment.jpg";
 import addIcon from "@/assets/icons/add.png";
 import downloadIcon from "@/assets/icons/download.png";
+import addFriendIcon from "@/assets/icons/add-friend.png";
+import deleteFriendIcon from "@/assets/icons/remove-friend.png"; 
 
-// Estado del ComboBox (Filtro de Publicaciones)
-const filterType = ref("Todos");
 
-// Lista de amigos
+// Lista de amigos (esto debería ser una API)
 const friends = ref([
   { id: 1, name: "Juan", username: "@juanp", profileImage: placeholderImage },
   { id: 2, name: "María", username: "@marial", profileImage: placeholderImage },
@@ -20,7 +19,7 @@ const friends = ref([
   { id: 4, name: "Ana", username: "@anap", profileImage: placeholderImage }
 ]);
 
-// Lista de rutinas con estado de like
+// Lista de rutinas con estado de like (esto debería ser una API)
 const routines = ref([
   { id: 1, sender: "Juan", text: "Rutina prueba espalda", profileImage: placeholderImage, liked: false },
   { id: 2, sender: "María", text: "Rutina prueba pierna", profileImage: placeholderImage, liked: false },
@@ -36,7 +35,6 @@ const toggleCommentBox = (messageId) => {
   showCommentBox.value = showCommentBox.value === messageId ? null : messageId;
 };
 </script>
-
 <template>
   <div class="social-container">
     <!-- Rutinas -->
@@ -72,8 +70,8 @@ const toggleCommentBox = (messageId) => {
             <span class="friend-username">{{ friend.username }}</span>
           </div>
           <div class="friend-actions">
-            <button class="add-btn">➕</button>
-            <button class="remove-btn">❌</button>
+            <img :src="addFriendIcon" alt="Añadir amigo" class="friend-action-icon" />
+            <img :src="deleteFriendIcon" alt="Eliminar amigo" class="friend-action-icon" />
           </div>
         </div>
       </div>
@@ -87,8 +85,8 @@ const toggleCommentBox = (messageId) => {
 .social-container {
   display: flex;
   height: 100vh;
-  background-color: #1a1a1d;
-  color: white;
+  background-color: var(--primary_bg);
+  color: whitesmoke;
 }
 
 /* Sección de Rutinas */
@@ -101,7 +99,7 @@ const toggleCommentBox = (messageId) => {
 
 /* Mensajes */
 .message {
-  background: #2e2e30;
+  background: var(--secondary_bg);
   padding: 15px;
   margin-bottom: 15px;
   border-radius: 8px;
@@ -125,13 +123,13 @@ const toggleCommentBox = (messageId) => {
 
 .username {
   font-weight: bold;
-  font-size: 16px;
+  font-size: 20px;
 }
 
 .message-text {
-  font-size: 14px;
+  font-size: 16px;
   margin-bottom: 15px;
-  color: white;
+  color: whitesmoke;
 }
 
 .message-actions {
@@ -140,10 +138,9 @@ const toggleCommentBox = (messageId) => {
   align-items: center;
 }
 
-/* Iconos de acción */
 .action-icon {
-  width: 20px;
-  height: 20px;
+  width: 30px;
+  height: 30px;
   cursor: pointer;
   transition: transform 0.2s ease-in-out;
 }
@@ -151,6 +148,22 @@ const toggleCommentBox = (messageId) => {
 .action-icon:hover {
   transform: scale(1.1);
 }
+
+.friend-actions {
+  display: flex;
+  gap: 15px; 
+}
+.friend-action-icon {
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+  transition: transform 0.2s ease-in-out;
+}
+
+.friend-action-icon:hover {
+  transform: scale(1.1);
+}
+
 
 /* Sección de Amigos */
 .friends-container {
@@ -175,6 +188,8 @@ const toggleCommentBox = (messageId) => {
   border-radius: 5px;
   border: none;
   font-size: 14px;
+  background: var(--primary_bg);
+  color: whitesmoke;
 }
 
 /* Lista de amigos */
@@ -191,7 +206,7 @@ const toggleCommentBox = (messageId) => {
 
 /* Tarjeta de amigo */
 .friend-card {
-  background: #444;
+  background: var(--dark_main_color);
   display: flex;
   align-items: center;
   padding: 10px;
@@ -208,6 +223,10 @@ const toggleCommentBox = (messageId) => {
   border-radius: 50%;
 }
 
+
+
+
+
 /* Información del amigo */
 .friend-info {
   flex-grow: 1;
@@ -216,14 +235,13 @@ const toggleCommentBox = (messageId) => {
   justify-content: center;
 }
 
-
 .friend-name {
   font-weight: bold;
-  color: white;
+  color: whitesmoke;
 }
 
 .friend-username {
-  font-size: 12px;
+  font-size: 18px;
   color: #bbb;
 }
 
@@ -244,26 +262,27 @@ const toggleCommentBox = (messageId) => {
 }
 
 .add-btn {
-  color: green;
+  color: var(--light_main_color);
 }
 
 .remove-btn {
-  color: red;
+  color: var(--very_light_main_color);
 }
 
 /* Botón de agregar amigo */
 .add-friend {
-  background: #800020;
-  color: white;
+  background: var(--main_color);
+  color: whitesmoke;
   border: none;
   padding: 10px 20px;
   border-radius: 5px;
   cursor: pointer;
   font-size: 14px;
   margin-top: 10px;
+  transition: background-color 0.2s ease-in-out;
 }
 
 .add-friend:hover {
-  background: #a00030;
+  background: var(--light_main_color);
 }
 </style>
