@@ -7,7 +7,6 @@
     <div class="bg"></div>
     <div class="bg bg2"></div>
     <div class="bg bg3"></div>
-
     <div class="content-container">
       <h1 id="main_header">FitRevolution</h1>
       <h2 id="subtitle">Make your workout a revolution</h2>
@@ -15,18 +14,14 @@
     <div class="join_now_container">
       <router-link class="join_button" to="/register">Join Now!</router-link>
     </div>
-
   </div>
-
-
-
 </template>
 
 <style scoped>
 
 .join_now_container{
   position: absolute;
-  top: 60%;
+  top: 62%;
   left: 50%;
   transform: translate(-50%, -50%);
   display: flex;
