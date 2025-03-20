@@ -23,15 +23,14 @@ const props = defineProps({
   position: relative;      
   border: 2px solid black; 
   background-color: white; 
-  padding: 25px;           
+  padding: 43px;           
   border-radius: 8px;      
   width: 60%;
   height: 100px;           
   margin-bottom:10px
 }
 
-.panelSuperior {
-  position: relative;      
+.panelSuperior { 
   margin-bottom: 8px;     
 }
 
@@ -43,8 +42,8 @@ h1 {
 
 #moreOptions {
   position: absolute;      
-  top: 0;                  
-  right: 0;                
+  top: 12px;                  
+  right: 12px;                
   height: 3rem;            
   width: 3rem;
   display: flex;           

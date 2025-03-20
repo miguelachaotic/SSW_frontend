@@ -1,13 +1,6 @@
 <script setup>
 import UserRoutine from '@/components/UserRoutine.vue';
 
-/*
-PROBLEMAS
-Si haces la pantalla mas pequeña un lado se come a otro
-Como quitar el scroll global
-Como mover el scroll de la sección de rutinas al lado exacto del contenedor
-
- */
 </script>
 
 <template>
@@ -22,25 +15,14 @@ Como mover el scroll de la sección de rutinas al lado exacto del contenedor
             </div>
             <div class="routineElement">
                 <UserRoutine tittle="Push day" description="Chest-based pushing workout in which I will also train shoulders and triceps secondarily"/>
-                <UserRoutine tittle="Push day" description="Chest-based pushing workout in which I will also train shoulders and triceps secondarily"/>
-                <UserRoutine tittle="Push day" description="Chest-based pushing workout in which I will also train shoulders and triceps secondarily"/>
-                <UserRoutine tittle="Push day" description="Chest-based pushing workout in which I will also train shoulders and triceps secondarily"/>
-                <UserRoutine tittle="Push day" description="Chest-based pushing workout in which I will also train shoulders and triceps secondarily"/>
-                <UserRoutine tittle="Push day" description="Chest-based pushing workout in which I will also train shoulders and triceps secondarily"/>
-                <UserRoutine tittle="Push day" description="Chest-based pushing workout in which I will also train shoulders and triceps secondarily"/>
-                <UserRoutine tittle="Push day" description="Chest-based pushing workout in which I will also train shoulders and triceps secondarily"/>
-                <UserRoutine tittle="Push day" description="Chest-based pushing workout in which I will also train shoulders and triceps secondarily"/>
-                <UserRoutine tittle="Push day" description="Chest-based pushing workout in which I will also train shoulders and triceps secondarily"/>
-                <UserRoutine tittle="Push day" description="Chest-based pushing workout in which I will also train shoulders and triceps secondarily"/>
-                <UserRoutine tittle="Push day" description="Chest-based pushing workout in which I will also train shoulders and triceps secondarily"/>
-                <UserRoutine tittle="Push day" description="Chest-based pushing workout in which I will also train shoulders and triceps secondarily"/>
-                <UserRoutine tittle="Push day" description="Chest-based pushing workout in which I will also train shoulders and triceps secondarily"/>
-                <UserRoutine tittle="Push day" description="Chest-based pushing workout in which I will also train shoulders and triceps secondarily"/>
-                <UserRoutine tittle="Push day" description="Chest-based pushing workout in which I will also train shoulders and triceps secondarily"/>
-                <UserRoutine tittle="Push day" description="Chest-based pushing workout in which I will also train shoulders and triceps secondarily"/>
-                <UserRoutine tittle="Push day" description="Chest-based pushing workout in which I will also train shoulders and triceps secondarily"/>
-                <UserRoutine tittle="Push day" description="Chest-based pushing workout in which I will also train shoulders and triceps secondarily"/>
-                <UserRoutine tittle="Push day" description="Chest-based pushing workout in which I will also train shoulders and triceps secondarily"/>
+                <UserRoutine tittle="Pull" description="Back-based pushing workout in which I will also train biceps secondary."/>
+                <UserRoutine tittle="Leg day" description="Attempting leg training, (still a beginner)"/>
+                <UserRoutine tittle="Arm day" description="Complete arm workout (without forearm)"/>
+                <UserRoutine tittle="Abs day :D" description="Just abs, no more muscle today..."/>
+                <UserRoutine tittle="Chess and back" description="Best day of the week <3"/>
+
+                
+
             </div>
         </div>
         <div class="filterSection">
@@ -86,7 +68,7 @@ Como mover el scroll de la sección de rutinas al lado exacto del contenedor
   display: flex;
   flex-direction: column;
   align-items: center;
-  height: 100vh;
+  height: calc(100vh - 2rem - 80px);
 }
 .routineElement{
     width: 100%;
@@ -106,14 +88,12 @@ Como mover el scroll de la sección de rutinas al lado exacto del contenedor
 .filterSection {
   width: 20%;
   background-color: var(--secondary_bg);
-  height: 100vh;
-  /*transform: translateY(-50%);
-  top: calc(50% + 27px);*/
+  height: calc(100vh - 80px);
   right: 0;
 }
 h1{
     font-size: 75px;
-    margin-top: 75px;
+    margin-top: 60px;
     text-align: center;
 }
 .checkbox_row label{
@@ -156,7 +136,7 @@ h1{
     justify-content: center;
 }
 form{
-    margin-top:150px;
+    margin-top:80px;
 }
 .button_container{
     display: flex;
@@ -166,14 +146,14 @@ form{
 button{
     border-radius: 5px;
     border:none;
-    padding: 20px 95px;
+    padding: 20px 25px;
     background-color: var(--dark_main_color);
     color:white;
     cursor:pointer;
     font-size: 20px;
 }
 input[type="text"]{
-    padding: 20px 95px;
+    padding: 20px 35px;
 }
 button:hover{
     background-color: var(--main_color);
