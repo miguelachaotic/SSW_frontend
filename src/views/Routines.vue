@@ -14,15 +14,12 @@ import UserRoutine from '@/components/UserRoutine.vue';
                 </div>
             </div>
             <div class="routineElement">
-                <UserRoutine tittle="Push day" description="Chest-based pushing workout in which I will also train shoulders and triceps secondarily"/>
-                <UserRoutine tittle="Pull" description="Back-based pushing workout in which I will also train biceps secondary."/>
-                <UserRoutine tittle="Leg day" description="Attempting leg training, (still a beginner)"/>
-                <UserRoutine tittle="Arm day" description="Complete arm workout (without forearm)"/>
-                <UserRoutine tittle="Abs day :D" description="Just abs, no more muscle today..."/>
-                <UserRoutine tittle="Chess and back" description="Best day of the week <3"/>
-
-                
-
+                <UserRoutine title="Push day" description="Chest-based pushing workout in which I will also train shoulders and triceps secondarily"/>
+                <UserRoutine title="Pull" description="Back-based pushing workout in which I will also train biceps secondary."/>
+                <UserRoutine title="Leg day" description="Attempting leg training, (still a beginner)"/>
+                <UserRoutine title="Arm day" description="Complete arm workout (without forearm)"/>
+                <UserRoutine title="Abs day :D" description="Just abs, no more muscle today..."/>
+                <UserRoutine title="Chess and back" description="Best day of the week <3"/>
             </div>
         </div>
         <div class="filterSection">
@@ -151,9 +148,10 @@ button{
     color:white;
     cursor:pointer;
     font-size: 20px;
+    transition: background-color 0.2s ease-in-out;
 }
 input[type="text"]{
-    padding: 20px 35px;
+    padding: 20px 30px;
 }
 button:hover{
     background-color: var(--main_color);

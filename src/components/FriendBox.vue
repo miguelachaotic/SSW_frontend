@@ -6,8 +6,6 @@ const props = defineProps({
   image: String
 });
 
-
-
 </script>
 
 <template>
@@ -47,7 +45,5 @@ const props = defineProps({
 .username {
   font-size: x-large;
 }
-
-
 
 </style>
