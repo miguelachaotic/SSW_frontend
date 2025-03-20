@@ -86,7 +86,7 @@ const linePoints = computed(() => {
         return `${x},${y}`
       })
       .join(' ')
-})
+});
 
 function xPosition(index) {
   return startX + index * (barWidth + gap)
@@ -97,6 +97,7 @@ function yPosition(weight) {
   const scale = maxHeight / maxValue
   return chartBottom - weight * scale
 }
+
 
 function barHeight(weight) {
   const maxValue = Math.max(...data.value.map(d => d.weight))
