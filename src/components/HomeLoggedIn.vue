@@ -11,6 +11,7 @@ let user = "Jose"
         <h1 class="welcome_message">Welcome back </h1> <h1 class="welcome_message" id="username"> {{user}}</h1>
         <h1 class="welcome_message">!</h1>
       </div>
+      <img src="@/assets/logoWeb.png" alt="web page logo" class="logo_image">
     </div>
     <div class="sidebar">
       <h1 id="updates_header">Last updates</h1>
@@ -23,7 +24,6 @@ let user = "Jose"
 .container{
   display: flex;
   height: 100%;
-  border: white 1px solid;
 }
 
 .content{
@@ -41,11 +41,17 @@ let user = "Jose"
 .header_container{
   display: flex;
   gap: 8px;
-  align-items: center;
+
 }
 
 .welcome_message{
   font-size: 36px;
+}
+
+.logo_image {
+  width: 400px;
+  height: 350px;
+  background-color: whitesmoke;
 }
 
 #username{
