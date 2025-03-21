@@ -17,8 +17,9 @@ const recepies = ref([
 ]);
 
 const recepiesMeal = ref([
-  {imagen: '../assets/icons/receta.jpg',texto: 'Zumo de naranja'},
+  
   {imagen: '../assets/icons/receta.jpg',texto: 'Café'},
+  {imagen: '../assets/icons/receta.jpg',texto: 'Zumo de naranja'},
   {imagen: '../assets/icons/receta.jpg',texto: 'Tostadas con Mantequilla'},
   {imagen: '../assets/icons/receta.jpg',texto: 'Cereales'},
   {imagen: '../assets/icons/receta.jpg',texto: 'Monster Blanco'},
@@ -217,6 +218,7 @@ const recepiesMeal = ref([
 
   .recepies-in-meal{
     margin-top: 20px;
+    
     list-style: none;
     display: flex;
     overflow-x: auto;
