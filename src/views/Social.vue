@@ -10,7 +10,8 @@ import downloadIcon from "@/assets/icons/download.png";
 import addFriendIcon from "@/assets/icons/add-friend.png";
 import deleteFriendIcon from "@/assets/icons/remove-friend.png";
 
-
+// Estado del ComboBox
+const filterType = ref("Todos");
 // Lista de amigos (esto debería ser una API)
 const friends = ref([
   { id: 1, name: "Juan", username: "@juanp", profileImage: placeholderImage },
@@ -39,28 +40,37 @@ const toggleCommentBox = (messageId) => {
   <div class="social-container">
     <!-- Rutinas -->
     <div class="routines-container">
-      <h2>Rutinas</h2>
-      <ul>
-        <li v-for="rtn in routines" :key="rtn.id" class="message">
-          <div class="message-header">
-            <img :src="rtn.profileImage" alt="Foto de perfil" class="profile-img" />
-            <span class="username">{{ rtn.sender }}</span>
-          </div>
-          <p class="message-text">{{ rtn.text }}</p>
-          <div class="message-actions">
-            <img :src="rtn.liked ? likedIcon : likeIcon" alt="Like icon" class="action-icon" @click="toggleLike(rtn.id)" />
-            <img :src="commentIcon" alt="Comment icon" class="action-icon" @click="toggleCommentBox(rtn.id)" />
-            <img :src="addIcon" alt="Add icon" class="action-icon" />
-            <img :src="downloadIcon" alt="Download icon" class="action-icon" />
-          </div>
-        </li>
-      </ul>
-    </div>
+<div class="routines-header">
+  <h2>Rutinas</h2>
+  <select v-model="filterType" class="combobox">
+    <option value="Todos">Todos</option>
+    <option value="Amigos">Amigos</option>
+  </select>
+</div>
+
+
+  <ul>
+    <li v-for="rtn in routines" :key="rtn.id" class="message">
+      <div class="message-header">
+        <img :src="rtn.profileImage" alt="Foto de perfil" class="profile-img" />
+        <span class="username">{{ rtn.sender }}</span>
+      </div>
+      <p class="message-text">{{ rtn.text }}</p>
+      <div class="message-actions">
+        <img :src="rtn.liked ? likedIcon : likeIcon" alt="Like icon" class="action-icon" @click="toggleLike(rtn.id)" />
+        <img :src="commentIcon" alt="Comment icon" class="action-icon" @click="toggleCommentBox(rtn.id)" />
+        <img :src="addIcon" alt="Add icon" class="action-icon" />
+        <img :src="downloadIcon" alt="Download icon" class="action-icon" />
+      </div>
+    </li>
+  </ul>
+</div>
+
 
     <!-- Amigos -->
     <div class="friends-container">
       <div class="search-box">
-        <input type="text" placeholder="🔍 Busca a un amigo" v-model="searchQuery" />
+        <input type="text" placeholder="🔍 Look for a user" v-model="searchQuery" />
       </div>
       <div class="friends-list">
         <div class="friend-card" v-for="friend in friends" :key="friend.id">
@@ -75,19 +85,41 @@ const toggleCommentBox = (messageId) => {
           </div>
         </div>
       </div>
-      <button class="add-friend"><span>➕ Add Friend</span></button>
     </div>
   </div>
 </template>
 
 <style scoped>
 /* Contenedor Principal */
+html, body {
+  margin: 0;
+  padding: 0;
+  overflow-y: hidden;
+  height: 100%;
+}
+
+
+
 .social-container {
   display: flex;
   height: 100vh;
   background-color: var(--primary_bg);
   color: whitesmoke;
+  overflow-y: hidden;
 }
+
+.combobox {
+  background: var(--main_color);
+  color: white;
+  border: none;
+  padding: 8px 15px;
+  cursor: pointer;
+  border-radius: 5px;
+  font-size: 14px;
+
+}
+
+
 
 /* Sección de Rutinas */
 .routines-container {
@@ -174,7 +206,8 @@ const toggleCommentBox = (messageId) => {
   display: flex;
   flex-direction: column;
   align-items: center;
-  height: 100%;
+  max-height: 100%;
+  overflow : hidden;
 }
 
 /* Barra de búsqueda */
@@ -197,7 +230,7 @@ const toggleCommentBox = (messageId) => {
 .friends-list {
   width: 100%;
   max-height: 300px;
-  overflow-y: auto;
+  overflow-y: auto; 
   overflow-x: hidden;
   padding: 5px;
   display: flex;
