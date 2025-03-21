@@ -30,8 +30,6 @@ const authenticated = inject('authenticated');
   </div>
 </template>
 
-//Prueba de push
-
 <style scoped>
 /* boton para autentificarte. ver el README si no lo has visto ya */
 #auth_aux_button {
@@ -66,7 +64,7 @@ a {
   align-content: center;
 }
 
-.router-link-active{
+.router-link-active {
   background: linear-gradient(var(--light_main_color), var(--very_light_main_color));
 }
 
