@@ -6,8 +6,6 @@ const props = defineProps({
   description: String
 });
 
-
-
 </script>
 
 <template>
@@ -20,7 +18,7 @@ const props = defineProps({
       {{description}}
     </div>
     <div class="buttons">
-      <img src="@/assets/icons/like.jpg" alt="like button">
+      <img src="@/assets/icons/like.png" alt="like button">
       <img src="@/assets/icons/comment.jpg" alt="comment button">
       <img src="@/assets/icons/moreOptions.png" alt="more options" >
     </div>

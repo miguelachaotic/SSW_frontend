@@ -6,7 +6,7 @@ import UserRoutine from '@/components/UserRoutine.vue';
 <template>
     <div class="container">
         <div class="routineSection">
-            <div class="routineButtoms">
+            <div class="routineButtons">
                 <button type="button">Create New Workout</button>
                 <button type="button">Default Routines</button>
                 <div class="buscadorsection">
@@ -46,7 +46,7 @@ import UserRoutine from '@/components/UserRoutine.vue';
                 </div>
             </form>
         </div>
-    </div>    
+    </div>
         <!-- <UserRoutine tittle="Push day" description="Chest-based pushing workout in which I will also train shoulders and triceps secondarily"/>
         <UserRoutine tittle="Pull" description="Back-based pushing workout in which I will also train biceps secondary."/>
 
@@ -67,16 +67,25 @@ import UserRoutine from '@/components/UserRoutine.vue';
   align-items: center;
   height: calc(100vh - 2rem - 80px);
 }
-.routineElement{
-    width: 100%;
-    background-color: var(--primary_bg);
-    display: flex;
+.routineElement {
+  width: 100%;
+  background-color: var(--primary_bg);
+  display: flex;
   flex-direction: column;
   align-items: center;
   padding-top: 2rem;
   overflow-y: auto;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
 }
-.routineButtoms{
+
+.routineElement::-webkit-scrollbar {
+  display: none;
+}
+
+
+
+.routineButtons{
     display: flex;
     gap:50px;
     margin-bottom: 20px;
@@ -88,20 +97,23 @@ import UserRoutine from '@/components/UserRoutine.vue';
   height: calc(100vh - 80px);
   right: 0;
 }
+
 h1{
     font-size: 75px;
     margin-top: 60px;
     text-align: center;
 }
+
 .checkbox_row label{
     color: white;
 
 }
 .checkbox_row {
     display: flex;
-    align-items: center; 
-    margin-bottom: 40px; 
+    align-items: center;
+    margin-bottom: 40px;
 }
+
 .checkbox_row input {
     appearance: none;
     border-color: var(--main_color);
@@ -115,15 +127,18 @@ h1{
     cursor: pointer;
     transition: all 0.3s ease;
     margin-left: 20px;
-    margin-right: 10px; 
+    margin-right: 10px;
 }
+
 .checkbox_row input:hover{
     background-color:var(--very_light_main_color) ;
 }
+
 .checkbox_row input:checked {
     background-color: var(--main_color); /* Color de relleno cuando está seleccionado */
     border-color: var(--dark_main_color); /* Color del borde cuando está seleccionado */
 }
+
 .checkbox_row input:checked::after {
     content: '✔';
     color: white;
@@ -132,14 +147,17 @@ h1{
     align-items: center;
     justify-content: center;
 }
-form{
+
+form {
     margin-top:80px;
 }
+
 .button_container{
     display: flex;
     justify-content: center;
     margin-top: 20px;
 }
+
 button{
     border-radius: 5px;
     border:none;
@@ -150,12 +168,15 @@ button{
     font-size: 20px;
     transition: background-color 0.2s ease-in-out;
 }
+
 input[type="text"]{
     padding: 20px 30px;
 }
+
 button:hover{
     background-color: var(--main_color);
 }
+
 label,input[type="checkbox"],.checkbox_row input{
     cursor:pointer;
 }

@@ -1,14 +1,14 @@
 <script setup>
 import { ref } from "vue";
 
-import placeholderImage from '@/assets/StockPfp.png';
+import placeholderImage from '@/assets/stockPfp.png';
 import likeIcon from "@/assets/icons/like.png";
 import likedIcon from "@/assets/icons/like.png";
 import commentIcon from "@/assets/icons/comment.jpg";
 import addIcon from "@/assets/icons/add.png";
 import downloadIcon from "@/assets/icons/download.png";
 import addFriendIcon from "@/assets/icons/add-friend.png";
-import deleteFriendIcon from "@/assets/icons/remove-friend.png"; 
+import deleteFriendIcon from "@/assets/icons/remove-friend.png";
 
 
 // Lista de amigos (esto debería ser una API)
@@ -139,10 +139,11 @@ const toggleCommentBox = (messageId) => {
 }
 
 .action-icon {
-  width: 30px;
-  height: 30px;
+  width: 40px;
+  height: 40px;
   cursor: pointer;
   transition: transform 0.2s ease-in-out;
+  border-radius: 50%;
 }
 
 .action-icon:hover {
@@ -151,7 +152,7 @@ const toggleCommentBox = (messageId) => {
 
 .friend-actions {
   display: flex;
-  gap: 15px; 
+  gap: 15px;
 }
 .friend-action-icon {
   width: 30px;
