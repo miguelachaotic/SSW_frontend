@@ -93,7 +93,15 @@ import User from "@/components/User.vue";
   flex-direction: column;
   overflow-y: auto;
   overflow-x: hidden;
+  scroll-behavior: smooth;
   gap: 10px;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+  align-items: center;
+}
+
+.sidebar_overflow::-webkit-scrollbar {
+  display: none;
 }
 
 .header_container{
@@ -126,6 +134,12 @@ import User from "@/components/User.vue";
   gap: 20px;
   overflow-y: auto;
   overflow-x: hidden;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.overflow-users::-webkit-scrollbar {
+  display: none;
 }
 
 .popular_posts {
@@ -145,6 +159,13 @@ import User from "@/components/User.vue";
   gap: 12px;
   overflow-y: auto;
   overflow-x: hidden;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+  align-items: center;
+}
+
+.overflow-posts::-webkit-scrollbar {
+  display: none;
 }
 
 
