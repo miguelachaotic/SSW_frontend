@@ -47,10 +47,6 @@ import UserRoutine from '@/components/UserRoutine.vue';
             </form>
         </div>
     </div>
-        <!-- <UserRoutine tittle="Push day" description="Chest-based pushing workout in which I will also train shoulders and triceps secondarily"/>
-        <UserRoutine tittle="Pull" description="Back-based pushing workout in which I will also train biceps secondary."/>
-
-        <UserRoutine tittle="Leg day" description="Attempting leg training, (still a beginner)"/>-->
 </template>
 
 <style scoped>

@@ -2,6 +2,7 @@
 
 import FriendBox from "@/components/FriendBox.vue";
 import WeeklyWeightChart from "@/components/WeeklyWeightChart.vue";
+import doom from '@/assets/images/doom.jpg'
 
 let user = {
   name: "Jose",
@@ -15,9 +16,8 @@ let user = {
 }
 
 const users = [
-  {username: 'pedro', desc: 'life is beautiful!', image: 'src/assets/images/doom.jpg'},
-  {username: 'francis_3000', desc: 'yeah baby', image: 'src/assets/images/master_chief.jpg'},
-  {username: 'Cramer_0xbit', desc: 'viva el gui', image: 'src/assets/Icono%20GUI.png'},
+  {username: 'pedro', desc: 'life is beautiful!', image: 'images/doom.jpg'},
+  {username: 'francis_3000', desc: 'yeah baby', image: 'images/master_chief.jpg'},
 ];
 
 </script>

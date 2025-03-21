@@ -7,18 +7,18 @@ import '@vuepic/vue-datepicker/dist/main.css'
 const date = ref(new Date());
 
 const recipeList = ref([
-  {image: 'src/assets/icons/receta.jpg',text: 'Arroz con Pollo'},
-  {image: 'src/assets/icons/receta.jpg',text: 'Guisantes con Jamón'},
-  {image: 'src/assets/icons/receta.jpg',text: 'Salmón a la plancha'},
+  {image: 'icons/receta.jpg',text: 'Arroz con Pollo'},
+  {image: 'icons/receta.jpg',text: 'Guisantes con Jamón'},
+  {image: 'icons/receta.jpg',text: 'Salmón a la plancha'},
 ]);
 
 const recipes = ref([
 
-  {image: 'src/assets/icons/receta.jpg',text: 'Café'},
-  {image: 'src/assets/icons/receta.jpg',text: 'Zumo de naranja'},
-  {image: 'src/assets/icons/receta.jpg',text: 'Tostadas con Mantequilla'},
-  {image: 'src/assets/icons/receta.jpg',text: 'Cereales'},
-  {image: 'src/assets/icons/receta.jpg',text: 'Monster Blanco'},
+  {image: 'icons/receta.jpg',text: 'Café'},
+  {image: 'icons/receta.jpg',text: 'Zumo de naranja'},
+  {image: 'icons/receta.jpg',text: 'Tostadas con Mantequilla'},
+  {image: 'icons/receta.jpg',text: 'Cereales'},
+  {image: 'icons/receta.jpg',text: 'Monster Blanco'},
 ]);
 </script>
 
@@ -65,7 +65,7 @@ const recipes = ref([
     </div>
   <div class="content">
     <div class="chart">
-      <img src="../assets/icons/piechart.jpg" alt="pie chart" class="chart-img">
+      <img src="@/assets/icons/piechart.jpg" alt="pie chart" class="chart-img">
       <h1>1600 / 2000 kcal</h1>
     </div>
     <div class="calendar">

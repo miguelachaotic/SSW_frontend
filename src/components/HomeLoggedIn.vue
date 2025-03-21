@@ -16,22 +16,22 @@ import User from "@/components/User.vue";
         <div class="popular_users">
           <h1>Popular Users</h1>
           <div class="overflow-users">
-            <User profile-image="src/assets/images/doom.jpg" username="alexelcapo"/>
-            <User profile-image="src/assets/images/doom.jpg" username="felipez"/>
-            <User profile-image="src/assets/images/master_chief.jpg" username="adrian_fitness"/>
-            <User profile-image="src/assets/images/master_chief.jpg" username="danifit"/>
-            <User profile-image="src/assets/images/doom.jpg" username="master_workout"/>
-            <User profile-image="src/assets/images/master_chief.jpg" username="m.angel.gym"/>
-            <User profile-image="src/assets/images/master_chief.jpg" username="mister_salad"/>
+            <User profile-image="images/doom.jpg" username="alexelcapo"/>
+            <User profile-image="images/doom.jpg" username="felipez"/>
+            <User profile-image="images/master_chief.jpg" username="adrian_fitness"/>
+            <User profile-image="images/master_chief.jpg" username="danifit"/>
+            <User profile-image="images/doom.jpg" username="master_workout"/>
+            <User profile-image="images/master_chief.jpg" username="m.angel.gym"/>
+            <User profile-image="images/master_chief.jpg" username="mister_salad"/>
           </div>
         </div>
       </div>
       <div class="popular_posts">
         <h1 id="label_liked_posts">Most liked posts</h1>
         <div class="overflow-posts">
-          <UserPost username="felipez" profile-image="src/assets/images/doom.jpg" description="I found this awesome routine that you all should follow! Check it out!"/>
-          <UserPost username="el_fortachon" profile-image="src/assets/images/master_chief.jpg" description="This diet is incredible! It has all you have ever wanted!"/>
-          <UserPost username="danifit" profile-image="src/assets/images/master_chief.jpg" description="Do you want to grow more muscle? Follow me to discover!"/>
+          <UserPost username="felipez" profile-image="images/doom.jpg" description="I found this awesome routine that you all should follow! Check it out!"/>
+          <UserPost username="el_fortachon" profile-image="images/master_chief.jpg" description="This diet is incredible! It has all you have ever wanted!"/>
+          <UserPost username="danifit" profile-image="images/master_chief.jpg" description="Do you want to grow more muscle? Follow me to discover!"/>
         </div>
       </div>
     </div>
@@ -40,18 +40,18 @@ import User from "@/components/User.vue";
       <div class="sidebar_overflow">
         <UserPost
             username="Admin"
-            profile-image="src/assets/images/doom.jpg"
+            profile-image="images/doom.jpg"
             description="We recently added a new feature! Now you can publish your own created routines! Hope you all
                      enjoy this new feature and give us new feedback!"
         />
         <UserPost
           username="Admin"
-          profile-image="src/assets/images/doom.jpg"
+          profile-image="images/doom.jpg"
           description="Hi everyone! We added new things! Now you can create your own personalized diets. Use them wisely!"
         />
         <UserPost
             username="Admin"
-            profile-image="src/assets/images/doom.jpg"
+            profile-image="images/doom.jpg"
             description="Welcome everybody! I hope you're doing well!"
         />
       </div>
