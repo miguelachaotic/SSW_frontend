@@ -83,8 +83,6 @@ import UserRoutine from '@/components/UserRoutine.vue';
   display: none;
 }
 
-
-
 .routineButtons{
     display: flex;
     gap:50px;

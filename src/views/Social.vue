@@ -10,9 +10,6 @@ import downloadIcon from "@/assets/icons/download.png";
 import addFriendIcon from "@/assets/icons/add-friend.png";
 import deleteFriendIcon from "@/assets/icons/remove-friend.png";
 
-// Estado del ComboBox
-const filterType = ref("Todos");
-// Lista de amigos (esto debería ser una API)
 const friends = ref([
   { id: 1, name: "Juan", username: "@juanp", profileImage: placeholderImage },
   { id: 2, name: "María", username: "@marial", profileImage: placeholderImage },
@@ -20,21 +17,19 @@ const friends = ref([
   { id: 4, name: "Ana", username: "@anap", profileImage: placeholderImage }
 ]);
 
-// Lista de rutinas con estado de like (esto debería ser una API)
 const routines = ref([
-  { id: 1, sender: "Juan", text: "Rutina prueba espalda", profileImage: placeholderImage, liked: false },
-  { id: 2, sender: "María", text: "Rutina prueba pierna", profileImage: placeholderImage, liked: false },
-  { id: 3, sender: "Carlos", text: "Rutina prueba pecho", profileImage: placeholderImage, liked: false }
+  { id: 1, sender: "Juan", text: "Back training routine: " +
+        "Superman Hold + Bird-Dog (8-10 reps) + Bent-Over Rows (10-12 reps) + " +
+        "Reverse Snow Angels (10-12 reps) + Doorframe Rows (10-12 reps)", profileImage: placeholderImage, liked: false },
+  { id: 2, sender: "María", text: "Leg workout!! Bodyweight Squats (12-15 reps) + " +
+        "Glute Bridges (15-20 reps) + Wall Sit (30 secs) + " +
+        "Calf Raises (15-20 reps) + Step-Ups (10 per leg) + Standing Kickbacks (10-12 per leg)", profileImage: placeholderImage, liked: false },
+  { id: 3, sender: "Carlos", text: "Beginner Chest + triceps training routine: " +
+        "Push-Ups (8-12 reps) + Incline Push-Ups (10-15 reps) + Wide Push-Ups (10 reps) + " +
+        "Kneeling Chest Squeeze (30 seconds) + Wall Push-Ups (15-20 reps) + " +
+        "Chest Dips on Chair (6-10 reps)", profileImage: placeholderImage, liked: false }
 ]);
 
-// Estado para manejar los comentarios
-const showCommentBox = ref(null);
-const searchQuery = ref("");
-
-// Alternar cuadro de comentarios
-const toggleCommentBox = (messageId) => {
-  showCommentBox.value = showCommentBox.value === messageId ? null : messageId;
-};
 </script>
 <template>
   <div class="social-container">
@@ -42,13 +37,11 @@ const toggleCommentBox = (messageId) => {
     <div class="routines-container">
 <div class="routines-header">
   <h2>Rutinas</h2>
-  <select v-model="filterType" class="combobox">
-    <option value="Todos">Todos</option>
-    <option value="Amigos">Amigos</option>
+  <select class="combobox">
+    <option value="all">All</option>
+    <option value="friends">Friends</option>
   </select>
 </div>
-
-
   <ul>
     <li v-for="rtn in routines" :key="rtn.id" class="message">
       <div class="message-header">
@@ -57,20 +50,17 @@ const toggleCommentBox = (messageId) => {
       </div>
       <p class="message-text">{{ rtn.text }}</p>
       <div class="message-actions">
-        <img :src="rtn.liked ? likedIcon : likeIcon" alt="Like icon" class="action-icon" @click="toggleLike(rtn.id)" />
-        <img :src="commentIcon" alt="Comment icon" class="action-icon" @click="toggleCommentBox(rtn.id)" />
+        <img :src="rtn.liked ? likedIcon : likeIcon" alt="Like icon" class="action-icon" />
+        <img :src="commentIcon" alt="Comment icon" class="action-icon" />
         <img :src="addIcon" alt="Add icon" class="action-icon" />
         <img :src="downloadIcon" alt="Download icon" class="action-icon" />
       </div>
     </li>
   </ul>
 </div>
-
-
-    <!-- Amigos -->
     <div class="friends-container">
       <div class="search-box">
-        <input type="text" placeholder="🔍 Look for a user" v-model="searchQuery" />
+        <input type="text" placeholder="🔍 Look for a user" />
       </div>
       <div class="friends-list">
         <div class="friend-card" v-for="friend in friends" :key="friend.id">
@@ -94,23 +84,23 @@ const toggleCommentBox = (messageId) => {
 html, body {
   margin: 0;
   padding: 0;
-  overflow-y: hidden;
-  height: 100%;
 }
 
-
+h2 {
+  font-size: 26px;
+}
 
 .social-container {
   display: flex;
-  height: 100vh;
+  height: 100%;
   background-color: var(--primary_bg);
   color: whitesmoke;
   overflow-y: hidden;
 }
 
 .combobox {
-  background: var(--main_color);
-  color: white;
+  background: whitesmoke;
+  color: var(--primary_bg);
   border: none;
   padding: 8px 15px;
   cursor: pointer;
@@ -119,19 +109,19 @@ html, body {
 
 }
 
-
-
 /* Sección de Rutinas */
 .routines-container {
   flex: 2;
-  background: var(--primary_bg);
+  background: linear-gradient(43deg, var(--light_main_color), var(--very_light_main_color));
   padding: 20px;
   overflow-y: auto;
+  margin: 20px 20px 0 10px;
+  border-radius: 10px;
 }
 
 /* Mensajes */
 .message {
-  background: var(--secondary_bg);
+  background: white;
   padding: 15px;
   margin-bottom: 15px;
   border-radius: 8px;
@@ -151,22 +141,25 @@ html, body {
   border-radius: 50%;
   object-fit: cover;
   margin-right: 10px;
+  background-color: white;
+  border: black 2px solid;
 }
 
 .username {
   font-weight: bold;
   font-size: 20px;
+  color: var(--primary_bg);
 }
 
 .message-text {
   font-size: 16px;
   margin-bottom: 15px;
-  color: whitesmoke;
+  color: var(--primary_bg);
 }
 
 .message-actions {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   align-items: center;
 }
 
@@ -184,33 +177,36 @@ html, body {
 
 .friend-actions {
   display: flex;
+  margin-right: 20px;
   gap: 15px;
 }
+
 .friend-action-icon {
   width: 30px;
   height: 30px;
   cursor: pointer;
   transition: transform 0.2s ease-in-out;
+  gap: 20px;
 }
 
 .friend-action-icon:hover {
   transform: scale(1.1);
 }
 
-
 /* Sección de Amigos */
 .friends-container {
   flex: 1;
-  background: var(--secondary_bg);
+  background: linear-gradient(0, var(--dark_main_color), var(--main_color));
   padding: 20px;
   display: flex;
   flex-direction: column;
   align-items: center;
   max-height: 100%;
   overflow : hidden;
+  border-radius: 0 0 0 10px;
+  margin-top: 3px;
 }
 
-/* Barra de búsqueda */
 .search-box {
   width: 90%;
   margin-bottom: 10px;
@@ -222,25 +218,25 @@ html, body {
   border-radius: 5px;
   border: none;
   font-size: 14px;
-  background: var(--primary_bg);
-  color: whitesmoke;
+  background: white;
+  color: var(--primary_bg);
 }
 
 /* Lista de amigos */
 .friends-list {
   width: 100%;
-  max-height: 300px;
-  overflow-y: auto; 
+  max-height: 90%;
+  overflow-y: auto;
   overflow-x: hidden;
   padding: 5px;
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  gap: 12px;
 }
 
 /* Tarjeta de amigo */
 .friend-card {
-  background: var(--dark_main_color);
+  background: linear-gradient(90deg, var(--light_main_color), var(--main_color));
   display: flex;
   align-items: center;
   padding: 10px;
@@ -255,11 +251,8 @@ html, body {
   width: 50px;
   height: 50px;
   border-radius: 50%;
+  background-color: white;
 }
-
-
-
-
 
 /* Información del amigo */
 .friend-info {
@@ -271,52 +264,12 @@ html, body {
 
 .friend-name {
   font-weight: bold;
+  font-size: 22px;
   color: whitesmoke;
 }
 
 .friend-username {
   font-size: 18px;
-  color: #bbb;
-}
-
-/* Botones de acción */
-.friend-actions {
-  display: flex;
-  gap: 5px;
-}
-
-.add-btn,
-.remove-btn {
-  width: 30px;
-  height: 30px;
-  background: none;
-  border: none;
-  font-size: 22px;
-  cursor: pointer;
-}
-
-.add-btn {
-  color: var(--light_main_color);
-}
-
-.remove-btn {
-  color: var(--very_light_main_color);
-}
-
-/* Botón de agregar amigo */
-.add-friend {
-  background: var(--main_color);
   color: whitesmoke;
-  border: none;
-  padding: 10px 20px;
-  border-radius: 5px;
-  cursor: pointer;
-  font-size: 14px;
-  margin-top: 10px;
-  transition: background-color 0.2s ease-in-out;
-}
-
-.add-friend:hover {
-  background: var(--light_main_color);
 }
 </style>
